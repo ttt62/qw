@@ -1,0 +1,927 @@
+/* =================================================================
+   Components CSS
+   ================================================================= */
+
+/* -----------------------------------------------------------------
+   Base Reset
+   ----------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --reel-padding: 1rem;
+    --reel-item-spacing: 20%;
+     --reel-first-spacing: 10%;
+     --blue:#465daa;
+     --beige:beige;
+     --red:#De7667;
+}
+html{
+
+
+/*モバイル用の画面表示
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    zoom:0.17;*/
+/*PC用の画面表示
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+    zoom:0.26;*/
+}
+/*font*/
+.klee-one-regular {
+  font-family: "Klee One", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.klee-one-semibold {
+  font-family: "Klee One", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-antique-regular {
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+noto-sans {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+/*icon*/
+.iconsize{
+    width:40px;
+    height:40px;
+}
+
+/*見出し*/
+.midasi{
+    height:auto;
+    width:50vw;
+
+}
+
+/*img*/
+.imgsize{
+    height:auto;
+    width:65%;
+}
+
+.imgsize-small{
+   height: 30%;
+    width:30%;
+
+   
+}
+
+
+/*h,p*/
+a {
+  color: var(--beige); 
+ 
+}
+#sansyou .a{
+    color:black;
+}
+
+.h10{
+    font-family: "Klee One", sans-serif;
+  font-weight: 600;
+   font-size:40px;
+   padding:1.5rem;
+   color:white;
+}
+.h5animero{
+    font-family: "Noto Sans", sans-serif;
+  font-weight: 900; 
+  font-variation-settings:
+    "wdth" 100;
+    font-size:11vw;
+    color:var(--beige);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.h5animesl{
+    font-family: "Noto Sans", sans-serif;
+  font-weight: 900; 
+  font-variation-settings:
+    "wdth" 100;
+    font-size:11vw;
+    color:var(--blue);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.h5{
+    font-family: "Noto Sans", sans-serif;
+  font-weight: 900; 
+  font-variation-settings:
+    "wdth" 100;
+    font-size:8vw;
+   
+}
+.span{
+    margin-top:1.5rem;
+     margin-bottom:1.5rem;
+     font-family: 'Klee One', sans-serif;
+     font-weight: 400;
+    font-size:20px;
+}
+.span2{
+    font-family: 'Klee One', sans-serif;
+     font-weight: 400;
+    font-size:20px;
+    color:white;
+}
+
+.p{
+    font-family: 'Klee One', sans-serif;
+    font-weight: 400;
+    font-size:20px;
+    color:var(--red);
+}
+.h1{
+ font-family: "Klee One", sans-serif;
+  font-weight: 900;
+   font-size:50px;
+   color:var(--blue);
+  }
+.p2{
+    font-family: 'Klee One', sans-serif;
+    font-weight: 400;
+    font-size:80px;
+}
+h2{
+    font-family: 'Klee One', sans-serif;
+    font-weight: 600;
+    font-size:40px;
+    text-align: center;
+}
+h3{
+    font-family: 'Klee One', sans-serif;
+    font-weight: 600;
+    font-size:30px;
+    text-align: center;
+}
+h4{
+    text-align: center;
+    font-family: 'Klee One', sans-serif;
+    font-weight: 400;
+    font-size:20px;
+}
+p{
+     font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-size:20px;
+  text-align: center;
+}
+.fontsmall{
+    
+     font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-size:10px;
+}
+/*video*/
+#niVideo{
+     aspect-ratio: 16/9;
+    height:60%;
+    
+    width:60%;
+    
+}
+#hoverVideo{
+      height:400px;
+    width:auto;
+}
+#chinaVideo{
+ height:400px;
+    width:auto;
+}
+#heroVideo{
+      height:400px;
+    width:auto;
+}
+#chiVideo{
+    aspect-ratio: 16/9;
+    height:60%;
+    
+    width:60%;
+}
+#yoVideo{
+   aspect-ratio: 16/9;
+    height:60%;
+    
+    width:60%;
+}
+
+/* -----------------------------------------------------------------
+   01. Stack Component - 垂直方向の余白管理
+   ----------------------------------------------------------------- */
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack > * + * {
+    margin-top: 1.5rem;
+}
+
+/* 余白のバリエーション */
+.stack-large > * + * {
+    margin-top: 2rem;
+}
+
+.stack-small > * + * {
+    margin-top: 0.5rem;
+}
+
+/* -----------------------------------------------------------------
+   02. Box Component - パディングとカラーテーマ管理
+   ----------------------------------------------------------------- */
+.box {
+    --color-light:var(--blue);
+    --color-dark: var(--blue);
+
+    color: var(--beige);
+    background-color: var(--beige);
+    padding: 2%;
+    border: 3px solid black;
+}
+
+.box * {
+    color: inherit;
+}
+
+.box.invert {
+    color: var(--blue);
+    background-color: var(--beige);
+}
+
+
+
+/* -----------------------------------------------------------------
+   03. Center Component - 水平方向の中央揃え
+   ----------------------------------------------------------------- */
+.center {
+    /* コンテンツ幅で計算する */
+    box-sizing: content-box;
+
+    /* 親要素のセンタリング */
+    max-width: 30ic;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 子要素の揃え */
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----------------------------------------------------------------
+   04. Cluster Component - フレックスボックスによる要素配置
+   ----------------------------------------------------------------- */
+.header .cluster {
+    /* フレックスボックスコンテキスト */
+    display: flex;
+    /* 折り返しを有効 */
+    flex-wrap: wrap;
+    /* スペース設定 */
+    gap: 1.5rem;
+
+    /* 主軸（垂直方向）の位置揃え */
+    justify-content: start;
+
+    /* 交差軸（水平方向）の位置揃え */
+    align-items: center;
+}
+
+/* クラスターを使ったメニュー設計 */
+.header .cluster-menu-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .cluster-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+     font-weight: bold;
+}
+
+/* -----------------------------------------------------------------
+   05. Sidebar Component - サイドバーレイアウト
+   ----------------------------------------------------------------- */
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.sidebar > :first-child {
+    flex-grow: 1;
+}
+
+.sidebar > :last-child {
+    flex-basis: 0;
+    /* スペース最大まで拡大する */
+    flex-grow: 999;
+    /* 最小幅 これを下回るとシングルカラムになる*/
+    min-width: 70%;
+}
+
+/* -----------------------------------------------------------------
+   06. Switcher Component - レスポンシブなレイアウト切り替え
+   ----------------------------------------------------------------- */
+.switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    --threshold: 30rem;
+}
+
+.switcher > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+/* -----------------------------------------------------------------
+   07. Cover Component - 上下のセンタリング
+   ----------------------------------------------------------------- */
+.cover {
+   
+    display: flex;
+    flex-direction: column;
+   
+  
+}
+
+.cover > * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.cover > :first-child:not(h1) {
+    margin-top: 0;
+}
+
+.cover > :last-child:not(h1) {
+    margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------------
+   08. Grid Component - レスポンシブグリッドレイアウト
+   ----------------------------------------------------------------- */
+.grid {
+    display: grid;
+    grid-gap: 1.5rem;
+    /* カラム最小幅 */
+    --minimum: 15ic;
+
+    /* カラム設定 */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(var(--minimum), 100%), 1fr)
+    );
+}
+
+/* -----------------------------------------------------------------
+   09. Frame Component - アスペクト比固定
+   ----------------------------------------------------------------- */
+.frame {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* インライン要素の隙間を解消する */
+    display: block;
+}
+
+/* アスペクト比のバリエーション */
+.frame-1-1 {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.frame-4-3 {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.frame-16-9 {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.frame-5-1 {
+    aspect-ratio: 5/1;
+    overflow: hidden;
+}
+
+/* クラス名の一部を指定して一度に設定する */
+[class^="frame-"] > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* -----------------------------------------------------------------
+   10. Reel Component - 水平スクロール
+   ----------------------------------------------------------------- */
+#hero .reel {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* 要素間にスペースが必要な場合、Stackを横に応用する */
+#hero .reel > * + * {
+    margin-left: 0;
+    margin-right:0;
+    margin-left:0;
+}
+
+/* 画像用のリールには高さを設定するとよい  */
+.image-reel {
+    height: 40%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* 画像の間にスペースが必要な場合、Stackを横に応用する */
+.image-reel > * + * {
+    margin-left: var(--reel-item-spacing);
+}
+
+/* 画像用リールの画像には、高さを100％に揃える属性を追加する */
+.image-reel > img {
+    height: auto;
+    width:90%;
+    /* アスペクト比を調整する場合は Frame コンポーネントの考え方が応用できる */
+    aspect-ratio:16/9;
+   
+    display: block;
+}
+#hero .video-reel {
+    height: auto;
+    
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* 画像の間にスペースが必要な場合、Stackを横に応用する */
+#hero .video-reel > * + * {
+    margin-left:var(--reel-item-spacing);
+}
+
+/* 画像用リールの画像には、高さを100％に揃える属性を追加する */
+#hero .video-reel > video {
+    height: auto;
+    width:90%;
+    /* アスペクト比を調整する場合は Frame コンポーネントの考え方が応用できる */
+   
+   
+}
+
+#hero video {
+  transform: scale(1.4);
+  width: 90%;
+  height: auto;
+ 
+
+}
+#hero .video-reel > video:first-child {
+    margin-left: var(--reel-first-spacing);
+}
+
+#hero .video-reel > video:last-child {
+    margin-right: var(--reel-first-spacing);
+}
+
+
+/* -----------------------------------------------------------------
+   11. Imposter Component - 要素の絶対配置・オーバーレイ
+   ----------------------------------------------------------------- */
+.imposter {
+   
+    z-index:10;
+    /* 要素の左上の点を位置指定コンテキストの中央に配置する */
+    position: absolute;
+   margin-top:10%;
+
+
+
+
+
+    /* 要素の中央が親要素の位置指定コンテキストの中央になるように位置を変更する */
+  
+
+    /* 親要素より大きくなった場合のはみ出し処理 */
+    overflow: auto;
+
+    /* 親要素とのパディングを設けるとき */
+   
+}
+.imposterside {
+     z-index:10;
+    /* 要素の左上の点を位置指定コンテキストの中央に配置する */
+    position:absolute;
+  margin-top:12%;
+    /* 要素の中央が親要素の位置指定コンテキストの中央になるように位置を変更する */
+   color:var(--beige);
+    transform:rotate(-90deg);;
+     
+
+    /* 親要素より大きくなった場合のはみ出し処理 */
+    overflow: hidden;
+
+   
+}
+.imposterbottom {
+    position:absolute;
+  /* 必要であれば調整 */
+margin-top:0;
+ margin-left: 6%;
+ margin-bottom:10%;
+  padding: 0;
+
+  
+
+
+     z-index:10;
+    /* 要素の左上の点を位置指定コンテキストの中央に配置する */
+  
+    
+ color:var(--beige);
+    /* 要素の中央が親要素の位置指定コンテキストの中央になるように位置を変更する */
+   
+
+    /* 親要素より大きくなった場合のはみ出し処理 */
+    overflow: hidden;
+
+  
+}
+
+/* 親要素を位置指定コンテキストにする */
+.parent {
+    position: relative;
+   z-index:0;
+  
+}
+
+
+
+
+/* -----------------------------------------------------------------
+   12. Icon Component - アイコンとテキストの配置
+   ----------------------------------------------------------------- */
+ .icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+ .icon svg {
+    height: 1.25em;
+    width: 1.25em;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* サイズバリエーション */
+.icon--small svg {
+    height: 0.75em;
+    width: 0.75em;
+}
+
+.icon--large svg {
+    height: 1.8em;
+    width: 1.8em;
+}
+
+/* テキストとの間隔を調整 */
+.icon--tight {
+    gap: 0.15em;
+}
+.icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+     font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.icon img {
+    height: 1.25em;
+    width: 1.25em;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* サイズバリエーション */
+.icon--small img {
+    height: 0.75em;
+    width: 0.75em;
+}
+
+.haeder .icon--large img {
+    height: 1.8em;
+    width: 1.8em;
+}
+
+/* テキストとの間隔を調整 */
+.header .icon--tight {
+    gap: 0.15em;
+}
+
+/* -----------------------------------------------------------------
+   Utility Classes - よく使用するユーティリティクラス
+   ----------------------------------------------------------------- */
+
+/* カード */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: auto;
+    height: 400px;
+    display: block;
+    overflow:hidden;
+}
+
+.card-inner {
+    padding: 1.5rem;
+}
+
+
+
+/*container-box*/
+ .container-box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.header .container-box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+#concept .container-box,#japan .container-box,#china .container-box{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+/*cluster*/
+.header .cluster-menu-set {
+    /* フレックスボックスコンテキスト */
+    display: flex;
+    /* 折り返しを有効 */
+    flex-wrap: wrap;
+    /* スペース設定 */
+    gap: 2rem;
+
+    /* 主軸（垂直方向）の位置揃え */
+    justify-content: space-between;
+
+    /* 交差軸（水平方向）の位置揃え */
+    align-items: center;
+}
+
+.header .cluster-menu {
+    /* フレックスボックスコンテキスト */
+    display: flex;
+    /* 折り返しを有効 */
+    flex-wrap: wrap;
+    /* スペース設定 */
+    gap: 2rem;
+
+    /* 主軸（垂直方向）の位置揃え */
+    justify-content: space-between;
+
+    /* 交差軸（水平方向）の位置揃え */
+    align-items: center;
+}
+/*center*/
+.center {
+    /* コンテンツ幅で計算する */
+    box-sizing: content-box;
+
+    /* 親要素のセンタリング */
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 子要素の揃え */
+    display: flex;
+    flex-direction: column;
+}
+.centerswitcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+/*cover*/
+.cover {
+    color:var(--blue);
+    --space: 6%;
+    ---space:7%;
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: var(--space);
+    padding-bottom: var(--space);
+    padding-left: var(---space);
+    padding-right: var(---space);
+}
+
+.cover > * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/*stack*/
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack  * + * {
+    margin-top: 1.5rem;
+}
+.stack {
+    margin-top: 1.5rem;
+}
+.stack-small * + * {
+ margin-top: 1.0rem;
+}
+/*sidebar*/
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: start;
+    justify-content: center;
+}
+
+.sidebar > :first-child {
+    flex-grow: 1;
+}
+.sidebar > :first-child {
+    flex-grow: 1;
+}
+
+/*switcher*/
+
+.switcher  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+     --threshold: 1rem;
+    justify-content: center;
+    align-items: center;  
+}
+.switcher > :first-child{
+ margin:0 0.5rem;
+}
+.switcher > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+
+/*grid*/
+.grid {
+    display: grid;
+    grid-gap: 1.5rem;
+    /* カラム最小幅 */
+    --minimum: 15ic;
+
+    /* カラム設定 */
+    /* repeat 繰り返す */
+    /* auto-fit 自動列数調整 */
+    /* minmax(min(var(--minimum), 100%), 1fr) 各列の最小サイズ（--minimumか100%の小さい方）と最大サイズ（フレクション単位の1倍） */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(var(--minimum), 100%), 1fr)
+    );
+}
+body{
+    background-color:var(--beige);
+    color:black;
+}
+.textcolor{
+    color:white;
+}
+.header {
+    z-index:100;
+    background-color:var(--blue);
+    position: sticky;
+    top: 0;
+    padding:1.0rem;
+    
+}
+#hero {
+    background-color:var(--blue);
+    background-size: cover;
+    background-position: center;
+   
+    
+}
+#concept #backcolor{
+background-image:url("../img/white.png");
+    background-size:300px 300px;
+    background-position: center;
+    
+     background-repeat: no-repeat;
+
+}
+
+#europe #art{
+    background-image:url("../img/pr.png");
+    background-size:60%;
+    background-position: center;
+  
+     background-repeat: no-repeat;
+
+}
+
+#japan #art{
+    background-image:url("../img/pb.png");
+    background-size:60%;
+    background-position: center;
+    
+     background-repeat: no-repeat;
+
+}
+
+#china #art{
+    background-image:url("../img/pr.png");
+    background-size:60%;
+    background-position:center;
+     
+     background-repeat: no-repeat;
+
+}
+#font{
+    margin-top:20px;
+    margin-left:20px;
+}
+#end{
+   background-image: url("../img/tyuugokugendai.png");
+    background-size:cover;
+    background-position: center;
+    width:100vw;
+     max-width: 100%;
+    height:auto;
+    
+}
+
+.sansyou{
+    background-color: var(--blue);
+}

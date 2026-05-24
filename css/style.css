@@ -1,0 +1,64 @@
+.perspective {
+    perspective: 1000px;
+}
+
+/* ホバーティルトエフェクト */
+
+
+
+.effect-flip {
+    transition: transform 0.6s ease;
+}
+
+.effect-flip:hover {
+    transform: rotateY(180deg) scale(1.1);
+}
+.effect-scale {
+    transition: transform 0.3s ease;
+}
+
+.effect-scale:hover {
+    transform: scale(1.15);
+}
+.effect-rotate {
+    
+    animation: rotate 8s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0) rotateY(0);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.effect-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotateZ(5deg);
+    }
+}
+.effect-slide {
+    animation: slide 5s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0%,
+    100% {
+        transform: translateX(0) rotateY(0deg);
+    }
+    25% {
+        transform: translateX(20px) rotateY(5deg);
+    }
+    75% {
+        transform: translateX(-20px) rotateY(-5deg);
+    }
+}
